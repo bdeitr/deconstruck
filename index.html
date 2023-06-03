@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script language="javascript" type="text/javascript" src="script.js"></script>
+  <div class="topnav">
+ <!-- <a href="archive.html">Archive</a>
+  <a href="interview.html">Interviews</a>
+  <a href="about.html">About</a>-->
+  </div>
+  <div class="menu">
+    <a href="index.html">Generator</a> 
+    <a href="archive.html">Archive</a>
+    <a href="interview.html">Interviews</a>
+    <a href="about.html">About</a>
+  </div>
+</head>
+
+
+<body>
+  <div class="cookies">
+      <div class="cookiesbutton" onclick="closeFunction()">ok
+      </div>
+    <div class="cookiestext">
+    You’re invited to take part in ‘DE-CONS-TRUCK’ project.<br>
+
+We want to deconstruct and subvert the patriarchal and sexist imagery of truck drivers and the bias attached to them through Feminist re-appropriation, using t-shirt as a living, moving manifesto. <br>
+<br>
+You have ONE run to generate your t-shirt and undertake your mission.<br>
+Pre-orders are now open<br>
+    </div>
+  </div>
+
+  <div class="popup" onclick="noBUY()"><img class="images" src="BUY.png"></div>
+  <div id="popupH"><img class="images" src="BUY02.png"></div>
+
+  <div id="button_container">
+    <button onclick="get_random_image()">Generate
+    </button>
+  </div>
+
+ 
+
+    
+    <div class="container">
+        
+<div class="allShirt">
+        <div class="tee-front">
+          <img src="images/front.png">
+        </div> 
+        <div class="tee-image">
+          <img class="images" id="image_shower2" style="position: absolute; z-index: 3;"/>
+          <img class="images" id="image_shower"/>
+        </div> 
+</div>
+    </div>
+
+      <div class="info">
+      <div class="Bio"></div>
+     <div class="miniTee">
+        <div class="tee-image small-image">
+          <img class="images" id="image_shower3" style="position: absolute; z-index: 3;"/>
+          <img class="images" id="image_shower4"/>
+        </div>
+        <img src="images/front.png" id="miniRotate"></div>
+     <div class="share" onclick="BUY()"><img class="images" src="share.png"></div>
+    </div>
+
+</body>
+</html>
