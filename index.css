@@ -1,0 +1,610 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(00, 255, 00);
+  font-family: Canterbury ;
+  color: #000000;
+  text-align: center;
+  font-size: 2vw;
+}
+.topnav { 
+  padding: 2vh;
+}
+
+.topnav a {
+  color:  rgb(00, 00, 00);
+  text-align: center;
+  padding: 3%;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color:  rgb(00, 255, 00);
+  color: red;
+}
+
+.topnav a.active {
+  background-color: rgb(00, 255, 00);
+  color: white;
+}
+
+.ty{
+  /*background-color: black;
+  color: rgb(0, 255, 0);*/
+  height: 15vh;
+  display: block;
+  transform: translate(-50%);
+  left: 50vw;
+  position: absolute;
+  padding-top: 24px;
+  }
+
+
+
+
+
+#magliainiziale{
+  display: block;
+  position: absolute;
+  height: 85vh;
+  transform: scale(1.6) translate(-31%);
+  top: 16vh;
+  left:50vw;
+}
+
+/*div per delimitare la zona in cui ho inserito la maglietta*/
+/*.pagecontainer {
+    display: flex;
+    width: 100vw;
+    height: 88vh;
+    justify-content: center;
+    border-bottom: 2px solid;
+    border-color: black;
+    overflow: hidden;
+}*/
+
+.container {  
+  display: flex;
+    /* width: 100vw; */
+    height: 92vh;
+    /*border-bottom: 2px solid;
+    border-color: black;*/
+    overflow: hidden;
+}
+
+.allShirt{
+  width: 100vw;
+  top: 25%;
+  scale: 1.7;
+  position: relative;
+}
+/* div in cui poi è posizionata la img della maglietta, che ha css in html diretto*/
+.tee-front {
+  /*position: absolute;
+  width: 100vw;*/
+}
+
+/* div in cui posizonare le immagini, che hanno stile images per dargli 100% di larghezza*/
+.tee-image {
+    display: block;
+    position: absolute;
+    top: -25%;
+    width: 100vw;
+    height: 100vh;
+    transform: scale(0.18);
+}
+
+.tee-image.small-image {
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%) scale(0.04);
+  transform-origin: top center;
+  z-index: 5;
+
+  animation: 4s rotatingAnimationYSmallImage linear infinite, 4s example linear infinite;
+}
+
+.images {
+  width: 100%;
+  /*transform: rotateY(180deg);*/
+  /*animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;*/
+}
+
+@keyframes example {
+  0% {opacity: 0%;}
+  50% {opacity: 0%;}
+  51% {opacity: 100%;}
+  100% {opacity: 100%;}
+}
+.info{
+  display: flex;
+  width: 100vw-4px;
+  height: 30vh;
+  border: 2px solid;
+  border-color: black;
+  overflow: hidden;
+}
+
+.Bio{
+  width: 50vw;
+  height: 30vh;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  border-color: black;
+  overflow: scroll;
+}
+
+.miniTee{
+  padding-top: 1.8vh;
+  width: 25vw;
+  height: 30vh;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  border-color: black;
+  overflow: hidden;
+  position: relative;
+}
+
+#miniRotate{
+  max-width: 100%;
+  max-height: 90%;
+  animation-name: example;
+  animation: 4s rotatingAnimationY linear infinite;
+}
+  @keyframes rotatingAnimationY {
+  0%{
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+  }
+  100% {
+    -webkit-transform: rotateY(450deg);
+            transform: rotateY(450deg);
+  }
+}
+
+@keyframes rotatingAnimationYSmallImage {
+  0%{
+    -webkit-transform: translate(-50%) scale(0.04) rotateY(90deg);
+            transform: translate(-50%) scale(0.04) rotateY(90deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%) scale(0.04) rotateY(450deg);
+            transform: translate(-50%) scale(0.04) rotateY(450deg);
+  }
+}
+
+.menu{
+  font-size: 20px;
+  background-color: rgb(0, 255, 0);
+  border: 2px solid;
+  border-color: black;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 8vw;
+  height: 17vh;
+  display: flex;
+  z-index: 9;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 0px 1px 20px 0px;
+}
+
+.filter{
+  font-family: sans-serif;
+  /*padding-top: 0.3vh;*/
+  font-size: 20px;
+  background-color: rgb(0, 255, 0);
+  border: 2px solid;
+  border-color: black;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 6vw;
+  height: 3vh;
+  display: flex;
+  z-index: 9;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: 0px 1px 20px 0px;
+}
+
+.titolo {
+  font-family: Arial Narrow MT Pro;
+  font-weight: bolder;
+  transform: scale(1,3);
+  font-size: 14.5vw;
+  margin-top: 575px;
+  margin-bottom: 25px;
+  margin-left: -9px;
+  }
+
+.sottoTitolo{
+  font-size: 63px;
+  position: relative;
+  top: -27.8vh;
+  text-align-last: center;
+  padding-left: 1vh;
+  padding-right: 1vh;
+  letter-spacing: -0.01em;
+  text-shadow:
+    -4px -4px 0 rgb(0, 255, 0),
+     0   -4px 0 rgb(0, 255, 0),
+     4px -4px 0 rgb(0, 255, 0),
+     4px  0   0 rgb(0, 255, 0),
+     4px  4px 0 rgb(0, 255, 0),
+     0    4px 0 rgb(0, 255, 0),
+    -4px  4px 0 rgb(0, 255, 0),
+    -4px  0   0 rgb(0, 255, 0);
+  }
+
+.boxTitolo{
+  height: 33vh;
+  border-bottom: 2px solid;
+  border-color: black;
+}
+
+.intro{
+ position: absolute;
+  left: 50vw;
+  transform: translate(-50%);
+  top: 38px;
+  width: 35vw;
+  font-family: cursive;
+  line-height: 1.1em;
+ 
+}
+
+.introBox{
+  display: flex;
+  height: 30vh;
+  position: absolute;
+  top: 65px;
+  width: 100vw;
+  font-family: cursive;
+  line-height: 1.1em;
+  border-bottom: 2px solid;
+  border-color: black;
+  border-top: 2px solid;
+}
+
+.textConteiner{
+  position: relative;
+  height: 55vh;
+  width: 100vw;
+  border-bottom: 2px solid;
+  border-color: black;
+}
+
+.colonna1 {
+  margin-right: 2%;
+  margin-left: 2%;
+  float: left;
+  width: 29.33%;
+  padding-top: 25px;
+}
+
+
+/*.slidecontainer {
+  width: 100%;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 75%;
+  height: 10%;
+  border-radius: 50%; 
+  background: #04AA6D;
+  cursor: pointer;ransition: opacity .2s;
+}
+*/
+
+.options {
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    z-index: 98; 
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    /* border-radius: 8px; */
+    /* box-sizing: border-box; */
+    /* padding: 0.3rem 1rem; */
+    /* width: 25vw; */
+    /* height: 50vh; */
+    transform: translate(-50%, -50%);
+    /* -webkit-transition: background .2s; */
+    /* transition: background .2s; */
+}     
+
+.cookies {
+  display: block;
+  background-color: rgba(0, 0, 0, .65);
+  position: fixed;
+  height: 50vh;
+  width: 100%;
+  bottom: 0px;
+  z-index: 99;
+}
+
+.cookiestext {
+  width: 65%;
+  margin: 3vw;
+  color: white;
+  font-family: Times New Roman ;
+  font-style: Italic;
+  /*text-transform: lowercase;*/
+  font-size: 28px;
+  text-align: left;
+  letter-spacing: .1em;
+}
+
+.cookiesbutton {
+  float: right;
+  margin: 3vw;
+  color: white;
+  font-family: Times;
+  text-decoration: underline overline;
+  text-underline-offset: .28rem;
+  text-transform: uppercase;
+  line-height: ;
+  font-size: 32px;
+  text-align: right;
+  letter-spacing: .1em;
+  border-color: white;
+  cursor: pointer;
+}
+
+.archivecontainer {
+  /*background-color: blue;
+  padding: 1.5vw;*/
+  position: relative;
+  display: flex;
+  height: 40vh;
+}
+
+.imgarchivecontainer { 
+  background-color: black;
+  margin: 1.5vw;
+  width: 47vw;
+}
+
+.imgarchive {
+  max-width:100%;
+  max-height:100%;
+  z-index: 3;
+}
+
+.archivetext {    
+    padding: 1vw;
+    line-height: 1.5em;
+    width: 45vw;
+    font-size: 1.2vh;
+    background-color: black;
+    position: absolute;
+    text-align: left;
+    color: white;
+    z-index: 2;
+    bottom: 0;
+}
+
+.intercontainer {
+  /*background-color: blue;
+  padding: 1.5vw;*/
+  position: relative;
+  display: flex;
+  height: 55vh;
+}
+
+.imgintercontainer { 
+  background-color: black;
+  margin: 1.5vw;
+  width: 47vw;
+}
+
+.imginter {
+  max-width:100%;
+  z-index: 3;
+}
+
+.intertext {    
+  font-family: PT mono;
+    padding: 1vw;
+    line-height: 1.5em;
+    width: 45vw;
+    font-size: 1.2vh;
+    background-color: black;
+    position: absolute;
+    text-align: left;
+    color: white;
+    z-index: 2;
+    bottom: 0;
+}
+
+
+#image_container{
+  position: relative;
+  height: 50vw;
+}
+#image_container >  img{
+  position: absolute;
+  scale: 0.7;
+}
+
+#inner_container{
+  width: 100%;
+  height: 80%;
+  float: left;
+  margin-bottom: 33px;
+
+}
+
+/*img{
+  width: 100%;
+  height: 100%;
+
+}*/
+
+#button_container{
+  position: absolute;
+    bottom: 45vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* margin-bottom: 1vh; */
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+}
+
+button{
+
+  font-family: cursive;
+    height: 8vh;
+    width: 26vh;
+    font-size: 4vh;
+    color: rgb(0, 255, 0);
+    /* outline: 1vh; */
+    cursor: pointer;
+    z-index: 98;
+    border-radius: 100vh;
+    background-color: black;
+}
+button:hover{
+  transform: scale(0.9);
+}
+
+button:active{
+  transform: scale(1.0);
+
+}
+
+
+.popup{
+    z-index: 10;
+    display: none;
+    position: fixed;
+    left: 50vw;
+    top: -8vh;
+    transform: translate(-50%) scale(0.4);
+    width: 1582px;
+    height: 1184px;
+    background-color: rgb(0, 255, 0);
+    border: 4px solid;
+    border-color: black;
+    box-shadow: 0px 1px 20px 0px;
+}
+
+#popupH{
+    z-index: 10;
+    display: none;
+    position: fixed;
+    left: 50vw;
+    top: -8vh;
+    transform: translate(-50%) scale(0.4);
+    width: 1582px;
+    height: 1184px;
+    background-color: rgb(0, 255, 0);
+    border: 4px solid;
+    border-color: black;
+}
+
+#popupH:hover{
+    display: none;
+}
+
+
+.animazionepop{
+  animation: 4s rotatingAnimationY linear infinite;
+}
+  @keyframes rotatingAnimationY {
+  0%{
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+  }
+  100% {
+    -webkit-transform: rotateY(450deg);
+            transform: rotateY(450deg);
+  }
+}
+
+
+.share{
+  width: 25vw;
+  height: 30vh;
+  overflow: hidden;
+}
+
+.player{
+  position: absolute;display:;
+  display: flex;
+  bottom: 0;
+  right: 0;
+  width: 50vw;
+  height: 39vh;
+}
+
+.play{
+  position: relative;
+  width: 50%;
+  border-right: 2px solid;
+  border-color: black;
+}
+
+.pause{
+  position: relative;
+  width: 50%;
+}
+
+/*AUDIO PLAYER*/
+/*audio {
+  width: 100%;
+  height: 500px;
+  margin-top: 5px;
+  margin-bottom: 6px;
+}
+
+audio::-webkit-media-controls-panel {
+background-color: rgb(255, 255, 0);
+padding-left: 0%;
+padding-right: 0%;
+}
+
+audio::-webkit-media-controls-timeline-container{
+  display: none !important;
+}
+
+audio::-webkit-media-controls-timeline{
+  display: none!important;
+  pointer-events: none;
+}
+
+audio::-webkit-media-controls-volume-slider-container {
+  display: none!important;
+}
+
+audio::-webkit-media-controls-volume-slider {
+  display: none!important;
+}
+
+audio::-webkit-media-controls-volume-control-hover-background {
+  display: none!important;
+}
+
+audio::-webkit-media-controls-volume-control-hover-background {
+  display: none!important;
+}
+
+audio::-webkit-media-controls-volume-control-container { 
+  display: none; 
+}
+
+audio::-webkit-media-controls-mute-button {
+  display: none!important;
+}
+
+
+audio::-webkit-media-controls-time-remaining-display {
+  display: none!important;
+}*/
